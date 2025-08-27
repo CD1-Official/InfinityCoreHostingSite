@@ -25,14 +25,72 @@
         radial-gradient(1000px 500px at 110% 10%, rgba(34,211,238,.12), transparent 60%),
         var(--bg);
       color: var(--text);
+    }
+
+    .topbar {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(140%) blur(8px);
+      background: linear-gradient(180deg, rgba(15,18,30,.85), rgba(15,18,30,.55));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .topbar-inner {
+      display: grid; align-items: center; gap: 12px;
+      grid-template-columns: 1fr auto 1fr;
+      padding: 12px clamp(12px, 2vw, 20px);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .left-nav, .right-nav { display: flex; align-items: center; gap: 10px }
+    .left-nav { justify-self: start }
+    .right-nav { justify-self: end }
+    .brand {
+      text-align: center; justify-self: center;
+    }
+    .brand h1 {
+      font-size: clamp(18px, 2vw, 22px);
+      letter-spacing: .08em; margin: 0; font-weight: 800;
+      background: linear-gradient(90deg, #e7e9ee, #bfc6ff 60%, #a6f6ff);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      text-transform: uppercase;
+    }
+    .tagline { margin: 2px 0 0; font-size: 12px; color: var(--muted) }
+
+    .link {
+      padding: 8px 10px;
+      border-radius: 10px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .link:hover { color: var(--text) }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 10px 14px; border-radius: 12px; font-weight: 700;
+      background: linear-gradient(180deg, var(--accent), #5a4bdc); color: white;
+      box-shadow: 0 10px 24px rgba(108,92,231,.35);
+      border: 1px solid rgba(255,255,255,.08);
+      text-decoration: none;
+    }
+    .btn.outline {
+      background: transparent; color: var(--text);
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: none;
+    }
+    .btn.discord {
+      background: linear-gradient(180deg, #5865F2, #4450d6);
+      box-shadow: 0 10px 24px rgba(88,101,242,.35);
+    }
+
+    .message-wrapper {
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      height: calc(100vh - 80px);
+      padding: 40px;
     }
     .message {
       max-width: 600px;
-      padding: 40px;
     }
     h1 {
       font-size: 2.5rem;
@@ -51,9 +109,28 @@
   </style>
 </head>
 <body>
-  <div class="message">
-    <h1>Coming Soon</h1>
-    <p>The InfinityCore Login page is under construction. Check back later or join our Discord for updates.</p>
-  </div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="left-nav">
+        <a class="btn discord" href="https://discord.gg/Rcfqga9Ufg" target="_blank">Discord</a>
+      </div>
+      <div class="brand">
+        <h1>INFINITYCORE HOSTING</h1>
+        <p class="tagline">#1 free/cheap Discord bot hosting</p>
+      </div>
+      <nav class="right-nav">
+        <a class="link" href="index.html">Home</a>
+        <a class="link" href="dashboard.html">Dashboard</a>
+        <a class="btn outline" href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="message-wrapper">
+    <div class="message">
+      <h1>Coming Soon</h1>
+      <p>The InfinityCore Login page is under construction. Check back later or join our Discord for updates.</p>
+    </div>
+  </main>
 </body>
 </html>
