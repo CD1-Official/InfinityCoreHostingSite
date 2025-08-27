@@ -94,14 +94,13 @@
       grid-template-areas:
         "info"
         "plans"
-        "contact"
         "staff";
     }
     @media(min-width:860px){
       .grid{
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-          "info contact"
+          "info"
           "plans staff";
       }
     }
@@ -109,7 +108,7 @@
     /* Cards */
     .card{
       background:linear-gradient(180deg, var(--panel), var(--panel-2));
-      border:1px solid rgba(255,255,255,.08);
+      border:1px solid rgba(255,510,255,.08);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding:20px;
@@ -147,22 +146,6 @@
     .features{margin:0 0 12px 16px; color:#cfd5ea}
     .features li{margin:4px 0}
 
-    /* Contact form */
-    .form{
-      display:grid; gap:10px;
-    }
-    .field label{display:block; font-size:13px; color:var(--muted); margin-bottom:6px}
-    .input, .textarea{
-      width:100%; color:var(--text); background:#0c1120;
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:10px; padding:10px 12px;
-      outline:none;
-    }
-    .textarea{min-height:110px; resize:vertical}
-    .input:focus, .textarea:focus{
-      border-color: var(--ring); box-shadow:0 0 0 3px var(--ring);
-    }
-
     /* Staff */
     .staff-list{list-style:none; margin:0; padding:0; display:grid; gap:12px}
     .staff-item{
@@ -190,7 +173,7 @@
   <header class="topbar">
     <div class="topbar-inner container" role="navigation" aria-label="Primary">
       <div class="left-nav">
-        <a class="btn discord" href="https://discord.gg/your-invite" target="_blank" rel="noopener">Discord</a>
+        <a class="btn discord" href="https://discord.gg/Rcfqga9Ufg" target="_blank" rel="noopener">Discord</a>
       </div>
       <div class="brand">
         <h1>INFINITYCORE HOSTING</h1>
@@ -198,7 +181,7 @@
       </div>
       <nav class="right-nav" aria-label="Links">
         <a class="link" href="#home">Home</a>
-        <a class="link" href="#donate">Donate</a>
+        <a class="link" href="#donate">Dashboard</a>
         <a class="btn outline" href="#login">Login</a>
       </nav>
     </div>
@@ -237,7 +220,7 @@
       <ul class="plan-list">
         <li class="plan">
           <h3>Free</h3>
-          <p class="price">£0 / mo</p>
+          <p class="price">£0 </p>
           <ul class="features">
             <li>1 bot container</li>
             <li>256 MB RAM, shared CPU</li>
@@ -248,35 +231,13 @@
 
         <li class="plan highlight">
           <h3>Starter</h3>
-          <p class="price">£2.50 / mo</p>
+          <p class="price">10 Discord Invites</p>
           <ul class="features">
             <li>1–2 bot containers</li>
             <li>512 MB RAM each</li>
             <li>No forced sleep</li>
           </ul>
           <a class="btn" href="#login">Choose Starter</a>
-        </li>
-
-        <li class="plan">
-          <h3>Plus</h3>
-          <p class="price">£5 / mo</p>
-          <ul class="features">
-            <li>Up to 3 containers</li>
-            <li>1 GB RAM each</li>
-            <li>Basic monitoring</li>
-          </ul>
-          <a class="btn outline" href="#login">Choose Plus</a>
-        </li>
-
-        <li class="plan">
-          <h3>Custom</h3>
-          <p class="price">Contact us</p>
-          <ul class="features">
-            <li>CPU/RAM tailored</li>
-            <li>Premium regions</li>
-            <li>Priority support</li>
-          </ul>
-          <a class="btn outline" href="#contact">Talk to sales</a>
         </li>
       </ul>
     </section>
@@ -287,22 +248,22 @@
         <li class="staff-item">
           <span class="avatar" aria-hidden="true"></span>
           <div>
-            <div><strong>Neo</strong> — Founder</div>
-            <div class="role">Infra, billing, roadmaps</div>
+            <div><strong>ClaretDigit1</strong> — Founder & Owner</div>
+            <div class="role">Managing Our Discord Bots</div>
           </div>
         </li>
         <li class="staff-item">
           <span class="avatar" aria-hidden="true"></span>
           <div>
-            <div><strong>Echo</strong> — Support Lead</div>
-            <div class="role">Tickets, Discord, docs</div>
+            <div><strong>JGamer</strong> — Co Owner</div>
+            <div class="role">Managing Our Discord Server</div>
           </div>
         </li>
         <li class="staff-item">
           <span class="avatar" aria-hidden="true"></span>
           <div>
-            <div><strong>Byte</strong> — SRE</div>
-            <div class="role">Uptime, scaling, monitoring</div>
+            <div><strong>AlienKid678</strong> — Sr Moderator</div>
+            <div class="role">Moderating Our Discord Server</div>
           </div>
         </li>
       </ul>
@@ -312,7 +273,6 @@
   <footer>
     <div class="container inner">
       <div class="small">© <span id="year"></span> INFINITYCORE HOSTING</div>
-      <div id="donate" class="small">Love this project? Consider donating.</div>
     </div>
   </footer>
 
