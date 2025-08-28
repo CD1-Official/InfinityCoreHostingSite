@@ -164,38 +164,51 @@
   <main class="container grid">
     <section class="card info">
       <h2>Info</h2>
-      <p>We host Discord bots with support for Node.js and Python runtimes. Our servers offer 99.9% uptime and automatic restarts to keep your bots online.</p>
-      <p>Locations: London, Frankfurt. Free tier includes 256MB RAM and shared CPU. Paid plans offer more resources and no sleep limits.</p>
+      <p>We are a small Discord Bot Creator/Coder. Bots will mainly be on 24/7. If you have a host for your server, you may request your discord bot code. We would appriciate you telling your friends about our service for their servers. </p>
+      <p>Locations: America and Germany</p>
     </section>
 
-    <section class="card plans">
-      <h2>Plans</h2>
-      <ul class="plan-list">
-        <li class="plan">
-          <h3>Free</h3>
-          <p class="price">£0</p>
-          <ul class="features">
-            <li>1 bot container</li>
-            <li>256 MB RAM, shared CPU</li>
-            <li>Sleep on inactivity</li>
-          </ul>
-          <a class="btn outline" href="#login">Get started</a>
-        </li>
-        </li>
-
-        <li class="plan highlight">
-          <h3>Starter</h3>
-          <p class="price">10 Discord Invites</p>
-          <ul class="features">
-            <li>1–2 bot containers</li>
-            <li>512 MB RAM each</li>
-            <li>No forced sleep</li>
-          </ul>
-          <a class="btn" href="#login">Choose Starter</a>
-        </li>
+<section class="card plans">
+  <h2>Plans</h2>
+  <ul class="plan-list">
+    <li class="plan">
+      <h3>Free</h3>
+      <p class="price">£0</p>
+      <ul class="features">
+        <li>1 bot container</li>
+        <li>256 MB RAM, shared CPU</li>
+        <li>90% uptime</li>
       </ul>
-    </section>
+      <a class="btn outline" href="javascript:void(0)" onclick="document.getElementById('errorBox').style.display='block'">Get started</a>
+    </li>
 
+    <li class="plan highlight">
+      <h3>Starter</h3>
+      <p class="price">10 Discord Invites</p>
+      <ul class="features">
+        <li>1–2 bot containers</li>
+        <li>512 MB RAM each</li>
+        <li>99.9% uptime</li>
+      </ul>
+      <a class="btn" href="javascript:void(0)" onclick="document.getElementById('errorBox').style.display='block'">Choose Starter</a>
+    </li>
+  </ul>
+</section>
+
+<!-- Error Modal -->
+<div id="errorBox" style="display:none; position:fixed; top:20%; left:50%; transform:translateX(-50%);
+     background:#fff; padding:20px; border:2px solid #f44336; border-radius:8px; z-index:1000;
+     box-shadow:0 0 10px rgba(0,0,0,0.2); text-align:center; max-width:300px;">
+  <p style="margin:0; font-family:sans-serif; color:#333;">
+    <strong>Currently unavailable.</strong><br>
+    Join our <a href="https://discord.gg/YOUR_INVITE" target="_blank">Discord</a> for updates or check back later.
+  </p>
+  <br>
+  <button onclick="document.getElementById('errorBox').style.display='none'"
+          style="background:#f44336; color:#fff; border:none; padding:8px 12px; border-radius:4px; cursor:pointer;">
+    Close
+  </button>
+</div>
     <section class="card staff">
       <h2>Staff</h2>
       <ul class="staff-list">
